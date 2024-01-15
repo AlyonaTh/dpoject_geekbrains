@@ -3,5 +3,5 @@ from .models import About
 
 
 @admin.register(About)
-class PostAdmin(admin.ModelAdmin):
+class AboutAdmin(admin.ModelAdmin):
     list_display = ('title', 'text')
