@@ -9,7 +9,7 @@ class PostView(View):
 
     def get(self, request):
         posts = Post.objects.all()
-        return render(request, 'blog/blog.html', {'post_list': posts})
+        return render(request, 'blog.html', {'post_list': posts})
 
 
 class PostDetail(View):
