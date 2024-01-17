@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.base import View
 from .models import About
-from ..blogapp.models import Post
-from ..shop.models import Product
+from blogapp.models import Post
+from shop.models import Product
 
 
 class AboutView(View):

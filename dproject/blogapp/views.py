@@ -17,7 +17,7 @@ class PostDetail(View):
 
     def get(self, request, pk):
         post = Post.objects.get(id=pk)
-        return render(request, 'blog/blog_detail.html', {'post': post})
+        return render(request, 'blog_detail.html', {'post': post})
 
 
 class AddComments(View):
@@ -61,8 +61,8 @@ class DelLike(View):
     def get(self, request, pk):
         ip_client = get_client_ip(request)
         try:
-            lik = Likes.objects.get(ip=ip_client)
-            lik.delete()
+            like = Likes.objects.get(ip=ip_client)
+            like.delete()
             return redirect(f'/blog/{pk}')
         except:
             return redirect(f'/blog/{pk}')
