@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -84,7 +84,7 @@
     </header>
 {% block title %}
      <div class="ftco-blocks-cover-1">
-      <div class="ftco-cover-1 overlay" style="background-image: url('{% static 'images/hero_2.jpg' %}')">
+      <div class="ftco-cover-1 overlay" style="background-image: url('{% static 'images/index.jpg' %}')">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-7 text-center">
@@ -108,7 +108,10 @@
           <div class="col-lg-4">
             <div class="widget">
               <h3>About</h3>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live.</p>
+              <p>The project consists of a blog and products with affiliate links related to home design.
+                The purpose of this project is to provide information and serve as a platform for exploring the topic
+                of home design. The blog content and the products featured are carefully curated to provide valuable
+                insights and resources for individuals interested in enhancing the design of their homes.</p>
             </div>
             <div class="widget">
               <h3>Connect with us</h3>
@@ -130,11 +133,11 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'shop' %}">Shop</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
                   </ul>
                 </div>
               </div>

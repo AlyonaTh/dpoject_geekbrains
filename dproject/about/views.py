@@ -15,6 +15,6 @@ class AboutView(View):
 class IndexView(View):
     """Index View"""
     def get(self, request):
-        posts = Post.objects.all()
-        products = Product.objects.all()
+        posts = Post.objects.all().order_by('-id')[:4]
+        products = Product.objects.all().order_by('-id')[:6]
         return render(request, 'index.html', {'post_list': posts, 'product_list': products})
