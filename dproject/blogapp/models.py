@@ -3,13 +3,13 @@ from django.db import models
 
 class Post(models.Model):
     """Post data"""
-    title = models.CharField('Post Title', max_length=100)
+    title = models.CharField('Post Title', max_length=200)
     description = models.TextField('Post text')
     author = models.CharField('Author name', max_length=100)
-    author_img = models.ImageField('Author image', upload_to='image/author')
-    author_about = models.CharField('About author', max_length=300)
+    author_img = models.ImageField('Author image', upload_to='images/author')
+    author_about = models.CharField('About author', max_length=500)
     date = models.DateTimeField('Publication date')
-    img = models.ImageField('Image', upload_to='image/%Y')
+    img = models.ImageField('Image', upload_to='images/%Y')
 
     def __str__(self):
         return f'{self.title}, {self.author}'
